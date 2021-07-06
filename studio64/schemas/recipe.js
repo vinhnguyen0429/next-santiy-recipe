@@ -2,6 +2,7 @@ export default {
   name: "recipe",
   title: "Recipe",
   type: "document",
+
   fields: [
     {
       name: "name",
@@ -63,7 +64,7 @@ export default {
               title: "Unit",
               type: "string",
               options: {
-                list: ["grams", "cup", "Tbsp.", "tsp."],
+                list: ["grams", "cup", "tsbp", "tsp"],
               },
             },
           ],
@@ -81,8 +82,8 @@ export default {
               subtitle,
               media,
               wholeNumber = "(No whole number set)",
-              fraction = "(No fraction set)",
-              unit = "(No unit set)",
+              fraction = "",
+              unit = "",
             }) {
               return {
                 title,
@@ -98,7 +99,11 @@ export default {
       name: "instructions",
       title: "Instructions",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        {
+          type: "block",
+        },
+      ],
     },
     {
       name: "likes",
@@ -106,7 +111,7 @@ export default {
       type: "number",
     },
   ],
-  initialValue: {
+  initalValue: {
     likes: 0,
   },
 };

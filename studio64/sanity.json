@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "studio"
+    "name": "studio64"
   },
   "api": {
-    "projectId": "hajlrit4",
+    "projectId": "j2tp15q4",
     "dataset": "production"
   },
   "plugins": [
